@@ -135,27 +135,38 @@
 		hour = document.createElement("span");
 		hour.className = "hour";
 		this.currentTime.appendChild(hour);
+		//时
+		HOUR = document.createElement("span");
+		HOUR.innerHTML = "时";
+		this.currentTime.appendChild(HOUR);
         //分钟
 		minute = document.createElement("span");
 		minute.className = "minute";
 		this.currentTime.appendChild(minute);
+		//分
+		MINUTE = document.createElement("span");
+		MINUTE.innerHTML = "分";
+		this.currentTime.appendChild(MINUTE);		
         //秒
 		second = document.createElement("span");
 		second.className = "second";
 		this.currentTime.appendChild(second);
+		//秒
+		SECOND = document.createElement("span");
+		SECOND.innerHTML = "秒";
+		this.currentTime.appendChild(SECOND);		
     }
 	//获取当前小时-分钟-秒
 	Calendar.prototype.getTime = function(){
-		const nowTime = new Date();
-		let nowHour = nowTime.getHours();
-		let nowMinute = nowTime.getMinutes();
-		let nowSecond = nowTime.getSeconds();
-		console.log(nowHour);
-		console.log(nowMinute);
-		console.log(nowSecond);
-		hour.innerHTML = nowHour;
-		minute.innerHTML = nowMinute;
-		second.innerHTML = nowSecond;
+		setInterval(function(){
+			const nowTime = new Date();
+			let nowHour = nowTime.getHours();
+			let nowMinute = nowTime.getMinutes();
+			let nowSecond = nowTime.getSeconds();
+			hour.innerHTML = nowHour;
+			minute.innerHTML = nowMinute;
+			second.innerHTML = nowSecond;
+		},1000);
 	}
     //获取日期
     Calendar.prototype.getDay = function(year,month,date){

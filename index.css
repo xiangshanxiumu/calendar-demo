@@ -23,20 +23,15 @@
     border-top:2px solid #CB1C18;
     border-bottom:2px solid #CB1C18;
 }
-
  .calendarSelectBox{
     position: relative;
 }
-
 .calendarDiv .calendarSelectBox select{
-
     font-size: 12px;
     width: 80px;
     align-content: center;
     padding: 1px
-
 }
-
 .calendarSelectBox select:nth-child(1){
   margin-right: 25px;
   padding-left: 5px;
@@ -53,13 +48,11 @@
     padding-left: 10px;
 
 }
-
  .calendarSelectBox p{
     display: block;
     float: left;
     padding: 1px
 }
-
   .calendarSelectBox p:nth-child(2){
   border: 1px solid #AAAAAA;
   background-color: #F9F9F9;
@@ -89,13 +82,11 @@
   position: absolute;
   left: 164px;
   top: 0px;
-
  }
   .calendarSelectBox p:nth-child(4):hover{
       border: 1px solid #55AAFF;
      color: skyblue;
   }
-
   .calendarSelectBox p:nth-child(6){
   float: right;
   margin-right:10px;
@@ -110,13 +101,11 @@
  }
  .calendarSelectBox p:nth-child(6):hover{
      border: 1px solid #55AAFF;
-
  }
-
  .rightBox{
      position: absolute;
-     left: 407px;
      top: 30px;
+     left: 407px;
      width: 150px;
      height: 421px;
      background-color: #72B9FF;
@@ -166,19 +155,15 @@
      color: #fff;
  }
 
-
 table{
     width: 100%;
     margin-top: 10px;
 }
-
 table tr:nth-child(1){
      border-bottom: 1px solid #ccc;
      border-top: 1px solid #55AAFF;
-     color: red;
-    
+     color: red; 
 }
-
 table tr th{
      font-family: "楷体";
      font-size: 20px;
@@ -215,7 +200,22 @@ table tr td{
 .cur{
     background-color:#FFBB00;
     opacity: 0.5;
-    color: #fff;
+    color: #fff;   
+}
 
-    
+.currentTime{
+    position: absolute;
+    top: 130px;
+    height: 60px;
+    width: 148px;
+    border: 1px solid gold;
+    display: flex;
+}
+.currentTime span{
+    display: block;
+    flex: 1;
+    text-align: center;
+    line-height: 60px;
+    background:#000;
+    color:gold;
 }
