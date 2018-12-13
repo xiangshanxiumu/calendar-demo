@@ -8,7 +8,7 @@
 }
 
 .calendarDiv{
-    position: absolute;
+ position: absolute;
     padding: 10px;
     top: 30px;
     border-left:2px solid #57ABFF;
@@ -16,131 +16,85 @@
     border-bottom:2px solid #57ABFF;
 }
 .calendarDivHoliday{
-    position: absolute;
+ position: absolute;
     padding: 10px;
     top: 30px;
     border-left:2px solid #CB1C18;
     border-top:2px solid #CB1C18;
     border-bottom:2px solid #CB1C18;
 }
+/*弹性布局*/
  .calendarSelectBox{
-    position: relative;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
 }
-.calendarDiv .calendarSelectBox select{
-    font-size: 12px;
-    width: 80px;
-    align-content: center;
-    padding: 1px
+.calendarSelectBox div{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.calendarSelectBox select:nth-child(1){
-  margin-right: 25px;
-  padding-left: 5px;
-}
-.calendarSelectBox select:nth-child(3){
-  margin-right: 10px;
-  padding-left: 10px;
-  width: 65px;
 
-}
-.calendarSelectBox select:nth-child(5){
-    margin-left: 15px;
-    width: 100px;
-    padding-left: 10px;
-
-}
- .calendarSelectBox p{
-    display: block;
-    float: left;
-    padding: 1px
-}
-  .calendarSelectBox p:nth-child(2){
-  border: 1px solid #AAAAAA;
-  background-color: #F9F9F9;
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  width: 10px;
-  height: 16px;
-  position: absolute;
-  left: 93px;
-  top: 0px;
- }
- .calendarSelectBox p:nth-child(2):hover{
-     border: 1px solid #55AAFF;
-     color: skyblue;
- }
-  .calendarSelectBox p:nth-child(4){
-  border: 1px solid #AAAAAA;
-  background-color: #F9F9F9;
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  width: 10px;
-  height: 16px;
-  position: absolute;
-  left: 164px;
-  top: 0px;
- }
-  .calendarSelectBox p:nth-child(4):hover{
-      border: 1px solid #55AAFF;
-     color: skyblue;
-  }
-  .calendarSelectBox p:nth-child(6){
-  float: right;
-  margin-right:10px;
-  border: 1px solid #AAAAAA;
-  background-color: #F9F9F9;
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  width: 64px;
-  height: 16px;
- }
- .calendarSelectBox p:nth-child(6):hover{
-     border: 1px solid #55AAFF;
- }
  .rightBox{
      position: absolute;
-     top: 30px;
      left: 407px;
+     top: 30px;
      width: 150px;
      height: 421px;
      background-color: #72B9FF;
  }
  .rightBoxHoliday{
     position: absolute;
-    left: 407px;
-    top: 30px;
-    width: 150px;
-    height: 421px;
-    background-color: #CB1C18;     
- }
+      left: 407px;
+      top: 30px;
+      width: 150px;
+      height: 421px;
+      background-color: #CB1C18;
+}
+ /*右侧 年月日+星期-外盒子*/
+.wrapBox5{
+    width: 140px;
+    position: absolute;
+    left:5px;
+    top:5px;
+    display: flex;
+    flex-direction: row;
+}
   .dateTxt{
-     display: inline-block;
+     flex:1.5;
      padding: 1px;
-     position: absolute;
-     top: 13px;
-     left: 10px;
      color: #fff;
      font-size: 14px;
      font-weight: 700;
+     text-align: center;
  }
-
  .dayTxt{
-     display: inline-block;
+     flex:1;
      padding: 1px;
-     position: absolute;
-     left: 90px;
-     top: 13px;
      color: #fff;
      font-size: 14px;
      font-weight: 700;
+     text-align: center;
  }
-
- .currentDay{
+.ulTime {
+  position: absolute;
+  top:145px;
+  width: 100%;
+  border:1px 0 1px 0 solid goldenrod;
+  background: #000;
+  display: flex;
+  flex-direction: row;
+  
+}
+.ulTime li {
+    flex:1;
+    list-style: none;
+    font-size: 14px;
+    color: gold;
+    text-align:center
+}
+.currentDay{
      position: absolute;
      top: 40px;
      left: 35px;
@@ -155,17 +109,20 @@
      color: #fff;
  }
 
+
 table{
     width: 100%;
     margin-top: 10px;
 }
+
 table tr:nth-child(1){
      border-bottom: 1px solid #ccc;
      border-top: 1px solid #55AAFF;
-     color: red; 
+     color: red;  
 }
+
 table tr th{
-     font-family: "楷体";
+        font-family: "楷体";
      font-size: 20px;
      line-height:30px;
      
@@ -173,7 +130,6 @@ table tr th{
 
 table tr:nth-child(n+2):nth-child(-n+6){
     border-bottom: 1px solid #ccc;
-
 }
 
 table,tr,td{
@@ -193,29 +149,11 @@ table tr td{
 }
 
 .col{
-    color: #BFBFBF;
-    
+    color: #BFBFBF;  
 }
 
 .cur{
     background-color:#FFBB00;
     opacity: 0.5;
-    color: #fff;   
-}
-
-.currentTime{
-    position: absolute;
-    top: 130px;
-    height: 60px;
-    width: 148px;
-    border: 1px solid gold;
-    display: flex;
-}
-.currentTime span{
-    display: block;
-    flex: 1;
-    text-align: center;
-    line-height: 60px;
-    background:#000;
-    color:gold;
+    color: #fff;  
 }
